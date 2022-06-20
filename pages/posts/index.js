@@ -1,8 +1,15 @@
 import Link from 'next/link'
+import styles from '../../styles/Home.module.css'
 
 function PostList({ posts }) {
+
   return (
     <>
+      <nav className={styles.footer}>
+        <Link href='/'>
+          <a>Home</a>
+        </Link>
+      </nav>
       <h1>List of Posts</h1>
       <hr />
       {posts.map(post => {

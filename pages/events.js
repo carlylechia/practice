@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
+import styles from '../styles/Home.module.css'
+import Link from "next/link"
 
 function EventList({ events }) {
   const [ sportsEvents, setSportsEvents ] = useState(events)
   const router = useRouter()
+
+  const showAllEvents = () => {
+    setSportsEvents(events)
+  }
 
   const fetchSportEvents = async () => {
     const response = await fetch('http://localhost:4000/events?category=sports')
@@ -18,7 +24,13 @@ function EventList({ events }) {
 
   return (
     <>
-      <button onClick={fetchSportEvents}>Sports Events</button>
+      <nav className={styles.footer}>
+        <Link href='/'>
+          <a>Home</a>
+        </Link>
+        <button onClick={showAllEvents} style={{background: 'green', padding: '0.5rem', marginLeft: '2rem', marginRight: '20rem'}}>All Events</button>
+        <button onClick={fetchSportEvents} style={{background: 'silver', padding: '0.5rem', marginLeft: '-18rem', marginRight: '15rem'}}>Sports Events</button>
+      </nav>
       <h2>List of Events</h2>
       <hr />
       {sportsEvents.map(event => {
@@ -27,7 +39,7 @@ function EventList({ events }) {
             <h3>
               {event.id} {event.title} {event.date} | {event.category}
             </h3>
-            <p>{event.description}</p>
+            <p className={styles.description}>{event.description}</p>
             <hr />
           </div>
         )

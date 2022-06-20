@@ -6,6 +6,7 @@ function PostDetails({ post }) {
   if(router.isFallback) {
     return <h3>Loading...</h3>
   }
+
   return(
     <>
       <h2>

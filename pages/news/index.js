@@ -1,17 +1,23 @@
 import Link from "next/link"
+import styles from '../../styles/Home.module.css'
 
 function NewsList({ articles }) {
   return (
     <>
-      <Link href={`news/${articles.category='Sports'}`}>
-        <a>Sports</a>
-      </Link>
-      <Link href={`news/${articles.category='Politics'}`}>
-        <a>Politics</a>
-      </Link>
-      <Link href={`news/${articles.category='Entertainment'}`}>
-        <a>Entertainment</a>
-      </Link>
+      <div className={styles.footer}>
+        <Link href='/'>
+          <a>Home</a>
+        </Link>
+        <Link href={`news/${articles.category='Sports'}`}>
+          <a>Sports</a>
+        </Link>
+        <Link href={`news/${articles.category='Politics'}`}>
+          <a>Politics</a>
+        </Link>
+        <Link href={`news/${articles.category='Entertainment'}`}>
+          <a>Entertainment</a>
+        </Link>
+      </div>
       <h2>List of News Articles</h2>
       <hr />
       {articles.map(article => {

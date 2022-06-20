@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
+import styles from '../styles/Home.module.css'
 
 function Home() {
   const router = useRouter()
@@ -9,6 +10,7 @@ function Home() {
   }
   return (
     <>
+      <div className={styles.footer}>
         <Link href='about'>
           <a>About</a>
         </Link>
@@ -39,8 +41,15 @@ function Home() {
         <Link href='events'>
           <a>Events</a>
         </Link>
-      <h1>Home Page</h1>
-      <button onClick={handleClick}>Place Order</button>
+      </div>  
+      <h1 className={styles.title}>Home Page</h1>
+      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
+      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
+      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
+      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
+      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
+      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
+      <button onClick={handleClick} className={styles.btn}>Place Order</button>
     </>
   )
 }

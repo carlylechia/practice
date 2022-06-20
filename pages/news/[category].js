@@ -1,3 +1,5 @@
+import styles from '../../styles/Home.module.css'
+
 function CategoryDisplay({ articles, category }) {
   return (
     <>
@@ -9,7 +11,7 @@ function CategoryDisplay({ articles, category }) {
             <h3>
               {article.id} {article.title} | <i>{article.category}</i>
             </h3>
-            <p>{article.description}</p>
+            <p className={styles.description}>{article.description}</p>
             <hr />
           </div>
         )
