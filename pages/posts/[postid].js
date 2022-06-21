@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import styles from '../../styles/Home.module.css'
 
 function PostDetails({ post }) {
   const router = useRouter()
@@ -13,7 +14,7 @@ function PostDetails({ post }) {
         {post.id} {post.title}
       </h2>
       <hr />
-      <p>{post.body}</p>
+      <p className={styles.description}>{post.body}</p>
     </>
   )
 }

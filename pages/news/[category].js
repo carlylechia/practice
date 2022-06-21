@@ -3,7 +3,7 @@ import styles from '../../styles/Home.module.css'
 function CategoryDisplay({ articles, category }) {
   return (
     <>
-      <h2>News Articles Under {category} Category</h2>
+      <h2>News Articles Under The {category} Category</h2>
       <hr />
       {articles.map(article => {
         return (

@@ -10,45 +10,43 @@ function Home() {
   }
   return (
     <>
-      <div className={styles.footer}>
-        <Link href='about'>
+      <nav className={styles.footer}>
+        <Link href='/about'>
           <a>About</a>
         </Link>
-        <Link href='profile'>
+        <Link href='/profile'>
           <a>Profile</a>
         </Link>
-        <Link href='blogs'>
+        <Link href='/blogs'>
           <a>Blogs</a>
         </Link>
-        <Link href='docs'>
+        <Link href='/docs'>
           <a>Docs</a>
         </Link>
-        <Link href='products'>
+        <Link href='/products'>
           <a>Products</a>
         </Link>
-        <Link href='users'>
+        <Link href='/users'>
           <a>Users</a>
         </Link>
-        <Link href='posts'>
+        <Link href='/posts'>
           <a>Posts</a>
         </Link>
-        <Link href='news'>
+        <Link href='/news'>
           <a>News</a>
         </Link>
-        <Link href='dashboardswr'>
+        <Link href='/dashboardswr'>
           <a>Dashboard</a>
         </Link>
-        <Link href='events'>
+        <Link href='/events'>
           <a>Events</a>
         </Link>
-      </div>  
+      </nav>  
       <h1 className={styles.title}>Home Page</h1>
       <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
       <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
       <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
-      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
-      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
-      <p className={styles.description}>This is a project I, Carlyle, used to study, and practice Next.js. It is also my very first Next.js application. So... <br /><i><b>Hello  Next.js World!</b></i></p>
+      
       <button onClick={handleClick} className={styles.btn}>Place Order</button>
     </>
   )

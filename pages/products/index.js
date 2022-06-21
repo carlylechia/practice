@@ -1,9 +1,13 @@
+import Head from "next/head"
 import Link from "next/link"
 import styles from '../../styles/Home.module.css'
 
 function ProductList({ productid }) {
   return (
     <>
+      <Head>
+        <title>Products</title>
+      </Head>
       <nav className={styles.footer}>
         <Link href='/'>
           <a>Home</a>
